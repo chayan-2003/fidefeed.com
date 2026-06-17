@@ -29,7 +29,7 @@ export async function POST(req: Request) {
       ${content}
     `;
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' }); // Use a free or lower-tier model
+    const model = genAI.getGenerativeModel({ model: 'gemma-4-31b-it' }); // Use a free or lower-tier model
 
     // Spam classification
     const spamResult = await model.generateContent(spamPrompt);
