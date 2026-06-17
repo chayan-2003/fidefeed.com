@@ -27,7 +27,7 @@ export async function POST(req: Request) {
     console.log('Pain Point Prompt:', painPointPrompt);
 
     try {
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+        const model = genAI.getGenerativeModel({ model: 'gemma-4-31b-it' });
         const painPointResult = await model.generateContent(painPointPrompt);
         const painPointText = (await painPointResult.response).text().trim();
         console.log('Pain Point Result:', painPointText);
