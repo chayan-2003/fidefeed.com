@@ -98,7 +98,7 @@ export async function POST(
       Provide only "spam" or "not spam" as the result.
     `;
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemma-4-31b-it' });
     const spamResult = await model.generateContent(spamPrompt);
     const spamText = (await spamResult.response).text().trim().toLowerCase();
     const isSpam = spamText === 'spam';
